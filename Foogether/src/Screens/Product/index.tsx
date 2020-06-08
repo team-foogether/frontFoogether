@@ -33,7 +33,7 @@ export default class mainProduct extends Component{
                       latitude: position.coords.latitude,
                       longitude: position.coords.longitude,
                   });
-                  Geocoder.init("AIzaSyAuJJKo9yXLsKmKwVs98cim_mhggvHeC6g",{language: 'ko'});
+                  
                   Geocoder.from(position.coords.latitude, position.coords.longitude)
                       .then(json => {
                         console.log(json);
