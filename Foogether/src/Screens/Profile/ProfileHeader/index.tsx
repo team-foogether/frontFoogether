@@ -2,8 +2,10 @@ import React from 'react';
 import Styled from 'styled-components/native';
 
 import Button from '~/Components/Button';
+import IconButton from '~/Components/IconButton';
 
 const Container = Styled.View`
+  margin-top: 20px;
   flex-direction: row;
 `;
 const ProfileImageContainer = Styled.View`
@@ -29,17 +31,19 @@ const LabelCount = Styled.Text`
   font-size: 16px;
   font-weight: bold;
 `;
+
 const LabelTitle = Styled.Text`
-  font-weight: 300;
+  font-weight: 100;
+  font-size: 20px;
 `;
+
 interface Props {
   image: string;
-  posts: number;
-  follower: number;
-  following: number;
+  nickname: string;
 }
 
-const ProfileHeader = ({image, posts, follower, following}: Props) => {
+
+const ProfileHeader = ({image, nickname}: Props) => {
   return (
     <Container>
       <ProfileImageContainer>
@@ -48,16 +52,7 @@ const ProfileHeader = ({image, posts, follower, following}: Props) => {
       <ProfileContent>
         <LabelContainer>
           <ProfileItem>
-            <LabelCount>{posts}</LabelCount>
-            <LabelTitle>게시물</LabelTitle>
-          </ProfileItem>
-          <ProfileItem>
-            <LabelCount>{follower}</LabelCount>
-            <LabelTitle>팔로워</LabelTitle>
-          </ProfileItem>
-          <ProfileItem>
-            <LabelCount>{follower}</LabelCount>
-            <LabelTitle>팔로잉</LabelTitle>
+            <LabelTitle>{nickname}님, 안녕하세요!</LabelTitle>
           </ProfileItem>
         </LabelContainer>
         <Button
@@ -67,7 +62,7 @@ const ProfileHeader = ({image, posts, follower, following}: Props) => {
             backgroundColor: '#FEFFFF',
             borderWidth: 1,
             borderColor: '#D3D3D3',
-            height: 32,
+            height: 30,
           }}
           color="#292929"
         />

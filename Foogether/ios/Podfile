@@ -81,6 +81,8 @@ target 'Foogether' do
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'FoogetherTests' do
     inherit! :complete
     # Pods for testing

@@ -5,24 +5,33 @@ const Container = Styled.TouchableOpacity`
   padding: 8px;
 `;
 const Icon = Styled.Image`
+   width: 20px;
+   height: 20px;
 `;
 
 interface Props {
   iconName:
-    | 'camera'
-    | 'live'
-    | 'send'
-    | 'dotMenu'
-    | 'favorite'
-    | 'comment'
-    | 'bookmark'
-    | 'menu';
+  | 'add'
+  | 'search'
+  | 'geo'
+  | 'camera'
+  | 'live'
+  | 'send'
+  | 'dotMenu'
+  | 'favorite'
+  | 'comment'
+  | 'bookmark'
+  | 'menu'
+  
   style?: object;
   onPress?: () => void;
 }
 
 const IconButton = ({ iconName, style, onPress }: Props) => {
   const imageSource = {
+    add : require('~/Assets/Images/add.png'),
+    search : require('~/Assets/Images/search.png'),
+    geo : require('~/Assets/Images/gps.png'),
     camera: require('~/Assets/Images/ic_camera.png'),
     live: require('~/Assets/Images/ic_live.png'),
     send: require('~/Assets/Images/ic_send.png'),
@@ -31,6 +40,7 @@ const IconButton = ({ iconName, style, onPress }: Props) => {
     comment: require('~/Assets/Images/ic_comment.png'),
     bookmark: require('~/Assets/Images/ic_bookmark.png'),
     menu: require('~/Assets/Images/ic_menu.png'),
+    
   };
 
   return (

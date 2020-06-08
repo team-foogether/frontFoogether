@@ -63,7 +63,7 @@ const RandomUserDataProvider = ({cache, children}: Props) => {
 
   const setDescriptions = async () => {
     const cachedData = await getCacheData('DescriptionList');
-    console.log(cachedData);
+    // console.log(cachedData);
     if (cachedData) {
       setDescriptionList(cachedData);
       return;
