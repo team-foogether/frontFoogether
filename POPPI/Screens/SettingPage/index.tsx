@@ -16,7 +16,6 @@ import { NavigationContainer } from '@react-navigation/native';
 const Container = Styled.View`
   flex: 1;
   background-color: #FFFFFF;
-  margin-left: 15px;
 `;
 
 const LabelTitle = Styled.Text`
@@ -24,6 +23,7 @@ font-size: 18px;
 font-weight: bold;
 margin-top: 30px;
 margin-bottom: 10px;
+margin-left: 15px;
 
 `;
 
@@ -40,7 +40,7 @@ const Label = Styled.Text`
 font-size: 17px;
 margin-top: 15px;
 margin-bottom: 15px;
-margin-left: 40px;
+margin-left: 55px;
 color: #757578;
 
 `;
@@ -48,12 +48,13 @@ color: #757578;
 const LabelContent = Styled.Text`
 font-size: 14px;
 color: #bfbfbf
+margin-left: 15px;
 `;
 
 const ProfileItem = Styled.View`
 flex-direction: row;
 margin-top: -57px;
-margin-left: 390px;
+margin-left: 415px;
 opacity: 0.3;
 `;
 
@@ -98,7 +99,7 @@ export default function SettingPage({navigation}: Props) {
         </LabelContainer>
           <View style={styles.container}>
             <Switch
-              trackColor={{ false: "#767577", true: "#8fa8db" }}
+              trackColor={{ false: "#767577", true: "#faab5c" }}
               thumbColor={isEnabled ? "#f4f3f4" : "#f4f3f4"}
               ios_backgroundColor="#3e3e3e"
               onValueChange={toggleSwitch}

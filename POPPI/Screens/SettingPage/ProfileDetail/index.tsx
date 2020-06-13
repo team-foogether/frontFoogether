@@ -13,7 +13,7 @@ const Container = Styled.View`
 const LabelContainer = Styled.TouchableOpacity`
   flex-direction: row;
   border: 1px;
-  border-color: #bdbdbf;
+  border-color: #ebebeb;
   top: 35px;
   padding: 6px;
   margin-bottom: 5px;
@@ -68,7 +68,14 @@ const SubLabel = Styled.Text`
   right: 35px;
 `;
 
-const ProfileDetail = () => {
+type NavigationProp = StackNavigationProp<ProfileTabParamList, 'Profile'>;
+
+interface Props {
+  navigation: NavigationProp;
+}
+
+
+const ProfileDetail = ({navigation}: Props) => {
   return (
     <Container>
 
@@ -101,17 +108,17 @@ const ProfileDetail = () => {
 
         <Label></Label>
 
-        <LabelContainer>
+        <LabelContainer onPress={() => {navigation.navigate('ChangePassword');}}>
             <Label>비밀번호 변경</Label>
         <ButtonController3>
-            <IconButton6 iconName="next" />
+            <IconButton6 onPress={() => {navigation.navigate('ChangePassword');}} iconName="next" />
         </ButtonController3>
         </LabelContainer>
 
-        <LabelContainer>
+        <LabelContainer onPress={() => {navigation.navigate('Withdrawal');}}>
             <Label1>회원 탈퇴</Label1>
-            <ButtonController>
-                <IconButton6 iconName="next" />
+            <ButtonController >
+                <IconButton6 onPress={() => {navigation.navigate('Withdrawal');}} iconName="next" />
             </ButtonController>
         </LabelContainer>
             

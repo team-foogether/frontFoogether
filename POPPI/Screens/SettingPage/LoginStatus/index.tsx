@@ -19,7 +19,8 @@ const Container = Styled.View`
 const LabelContainer = Styled.View`
   flex-direction: row;
   alignItems: center;
-  top: 50px;
+  top: 100px;
+  right: 45px;
   background-color: #FEFFFF;
   border-color: #d6d6d6;
   padding-left: 70px;
@@ -35,7 +36,9 @@ const ProfileItem = Styled.View`
   align-items: center;
 `;
 
-const Label = Styled.Text``;
+const Label = Styled.Text`
+  font-size: 20px;
+`;
 
 const BottomContainer = Styled.TouchableOpacity`
   align-items: center;
