@@ -47,12 +47,24 @@ import SettingPage from '~/Screens/SettingPage';
 import Notification from '~/Screens/Notification';
 import QuestionPage from '~/Screens/QuestionPage';
 import Question from '~/Screens/QuestionPage/Question';
-import MyQuestion from '~/Screens/QuestionPage/MyQuestion';
 import EditProfile from '~/Screens/EditProfile';
-import LoginStatus from '~/Screens/SettingPage/LoginStatus';
 import ProfileDetail from '~/Screens/SettingPage/ProfileDetail';
-
-
+import ChangePassword from '~/Screens/SettingPage/ProfileDetail/ChangePassword';
+import SetNewPw from '~/Screens/SettingPage/ProfileDetail/ChangePassword/SetNewPw';
+import Withdrawal from '~/Screens/SettingPage/ProfileDetail/Withdrawal';
+import DetailWd from '~/Screens/SettingPage/ProfileDetail/Withdrawal/DetailWd';
+import LoginStatus from '~/Screens/SettingPage/LoginStatus';
+import ReLogin from '~/Screens/SettingPage/ProfileDetail/ChangePassword/SetNewPw/ReLogin';
+import PhoneNum from '~/Screens/SettingPage/ProfileDetail/PhoneNum';
+import SuccessPn from '~/Screens/SettingPage/ProfileDetail/PhoneNum/SuccessPn';
+import Email from '~/Screens/SettingPage/ProfileDetail/Email';
+import CheckEmail from '~/Screens/SettingPage/ProfileDetail/Email/CheckEmail';
+import SuccessEmail from '~/Screens/SettingPage/ProfileDetail/Email/CheckEmail/SuccessEmail';
+import SetAuth from '~/Screens/SettingPage/SetAuth';
+import TOS from '~/Screens/SettingPage/TOS';
+import PrivacyPolicy from '~/Screens/SettingPage/PrivacyPolicy';
+import LocationPrivacy from '~/Screens/SettingPage/LocationPrivacy';
+import OpensourceLicense from '~/Screens/SettingPage/OpensourceLicense';
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -220,40 +232,110 @@ const ProfileTab = () => {
           component={SettingPage}
           options={{title: '설정'}}
         />
-         <Stack.Screen
-          name="QuestionPage"
-          component={QuestionPage}
-          options={{title: '문의하기'}}
-        />
-         <Stack.Screen
-          name="Question"
-          component={Question}
-          options={{title: '문의하기'}}
-        />
-         <Stack.Screen
-          name="MyQuestion"
-          component={MyQuestion}
-          options={{title: '내 문의글'}}
-        />
         <Stack.Screen
           name="Notification"
           component={Notification}
           options={{title: '공지사항'}}
         />
         <Stack.Screen
+          name="QuestionPage"
+          component={QuestionPage}
+          options={{title: '문의하기'}}
+        />
+        <Stack.Screen
+          name="Question"
+          component={Question}
+          options={{title: '문의하기'}}
+        />
+        <Stack.Screen
           name="EditProfile"
           component={EditProfile}
-          options={{title: '프로필 편집'}}
+          options={{title: '프로필 수정'}}
+        />
+        <Stack.Screen
+          name="ProfileDetail"
+          component={ProfileDetail}
+          options={{title: '상세 설정'}}
+        />
+        <Stack.Screen
+          name="ChangePassword"
+          component={ChangePassword}
+          options={{title: '비밀번호 변경'}}
+        />
+        <Stack.Screen
+          name="SetNewPw"
+          component={SetNewPw}
+          options={{title: '새 비밀번호'}}
+        />
+        <Stack.Screen
+          name="Withdrawal"
+          component={Withdrawal}
+          options={{title: '회원 탈퇴'}}
+        />
+        <Stack.Screen
+          name="DetailWd"
+          component={DetailWd}
+          options={{title: '회원 탈퇴'}}
         />
         <Stack.Screen
           name="LoginStatus"
           component={LoginStatus}
           options={{title: '로그인 정보'}}
         />
+        <Stack.Screen 
+          name="ReLogin"
+          component={ReLogin}
+          options={{title: '완료'}}
+        />
         <Stack.Screen
-          name="ProfileDetail"
-          component={ProfileDetail}
-          options={{title: '내 계정 설정'}}
+          name="PhoneNum"
+          component={PhoneNum}
+          options={{title: '전화번호 변경'}}
+        />
+        <Stack.Screen
+          name="SuccessPn"
+          component={SuccessPn}
+          options={{title: '전화번호 변경'}}
+        />
+        <Stack.Screen
+          name="Email"
+          component={Email}
+          options={{title: '이메일 변경'}}
+        />
+        <Stack.Screen
+          name="CheckEmail"
+          component={CheckEmail}
+          options={{title: '이메일 변경'}}
+        />
+        <Stack.Screen
+          name="SuccessEmail"
+          component={SuccessEmail}
+          options={{title: '이메일 변경'}}
+        />
+        <Stack.Screen
+          name="SetAuth"
+          component={SetAuth}
+          options={{title: '권한 설정'}}
+        />
+        <Stack.Screen
+          name="TOS"
+          component={TOS}
+          options={{title: '이용 약관'}}
+        />
+        <Stack.Screen
+          name="PrivacyPolicy"
+          component={PrivacyPolicy}
+          options={{title: '개인정보처리방침'}}
+        />
+        <Stack.Screen
+          name="LocationPrivacy"
+          component={LocationPrivacy}
+          options={{title: '위치기반서비스 이용약관'}}
+        />
+        <Stack.Screen
+          name="OpensourceLicense"
+          component={OpensourceLicense}
+          options={{title: '오픈소스 라이선스'}}
         />
     </Stack.Navigator>
   );
