@@ -7,6 +7,7 @@ import Button from '~/Components/Button';
 
 const Container = Styled.View`
   flex: 1;
+  background-color: #ffffff;
 
 `;
 

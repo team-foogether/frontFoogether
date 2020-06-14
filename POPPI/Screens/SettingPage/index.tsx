@@ -1,3 +1,4 @@
+  
 import React, { useState } from 'react';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {View, Switch, StyleSheet} from 'react-native';
@@ -24,7 +25,6 @@ font-weight: bold;
 margin-top: 30px;
 margin-bottom: 10px;
 margin-left: 15px;
-
 `;
 
 
@@ -42,7 +42,6 @@ margin-top: 15px;
 margin-bottom: 15px;
 margin-left: 55px;
 color: #757578;
-
 `;
 
 const LabelContent = Styled.Text`
@@ -106,13 +105,6 @@ export default function SettingPage({navigation}: Props) {
               value={isEnabled}
             />
           </View>
-          <LabelTitle>알림 설정</LabelTitle>
-          <LabelContainer>
-            <Label>알림 설정</Label>
-          <ProfileItem>
-          <IconButton5 iconName='next' />
-          </ProfileItem>
-          </LabelContainer>
             <LabelTitle>계정 설정</LabelTitle>
           <LabelContainer onPress={() => {navigation.navigate('ProfileDetail');}}>
             <Label>상세 설정</Label>
@@ -121,36 +113,36 @@ export default function SettingPage({navigation}: Props) {
             </ProfileItem>
           </LabelContainer>
           <LabelTitle>권한 설정</LabelTitle>
-          <LabelContainer>
+          <LabelContainer onPress={() => {navigation.navigate('SetAuth');}}>
             <Label>위치, 사진 등의 권한</Label>
             <ProfileItem>
-            <IconButton5 iconName='next' />
+            <IconButton5 onPress={() => {navigation.navigate('SetAuth');}} iconName='next' />
             </ProfileItem>
           </LabelContainer>
             <LabelContent>권한 설정은 디바이스 환경설정의 권한 상태를 확인해 주세요.</LabelContent>
           <LabelTitle>서비스 정보</LabelTitle>
-          <LabelContainer>
+          <LabelContainer onPress={() => {navigation.navigate('TOS');}}>
             <Label>이용 약관</Label>
             <ProfileItem>
-            <IconButton5 iconName='next' />
+            <IconButton5 onPress={() => {navigation.navigate('TOS');}} iconName='next' />
             </ProfileItem>
           </LabelContainer>
-          <LabelContainer>
+          <LabelContainer onPress={() => {navigation.navigate('PrivacyPolicy');}}>
             <Label>개인정보 처리방침</Label>
             <ProfileItem>
-            <IconButton5 iconName='next' />
+            <IconButton5 onPress={() => {navigation.navigate('PrivacyPolicy');}} iconName='next' />
             </ProfileItem>
             </LabelContainer>
-            <LabelContainer>
+            <LabelContainer onPress={() => {navigation.navigate('LocationPrivacy');}}>
             <Label>위치기반서비스 이용약관</Label>
             <ProfileItem>
-            <IconButton5 iconName='next' />
+            <IconButton5 onPress={() => {navigation.navigate('LocationPrivacy');}} iconName='next' />
             </ProfileItem>
             </LabelContainer>
-            <LabelContainer>
+            <LabelContainer onPress={() => {navigation.navigate('OpensourceLicense');}}>
             <Label>오픈소스 라이선스</Label>
             <ProfileItem>
-            <IconButton5 iconName='next' />
+            <IconButton5 onPress={() => {navigation.navigate('OpensourceLicense');}} iconName='next' />
             </ProfileItem>
             </LabelContainer>
     </Container>

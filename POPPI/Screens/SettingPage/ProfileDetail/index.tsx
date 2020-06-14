@@ -79,34 +79,26 @@ const ProfileDetail = ({navigation}: Props) => {
   return (
     <Container>
 
-        <LabelContainer>
-            <Label>연락처</Label>
+        <LabelContainer onPress={() => {navigation.navigate('PhoneNum');}}>
+            <Label>전화번호</Label>
             <SubLabelContainer>
                 <SubLabel>010-9508-2490</SubLabel>
             </SubLabelContainer>
         <ButtonController1>
-            <IconButton6 iconName="next" />
+            <IconButton6 onPress={() => {navigation.navigate('PhoneNum');}} iconName="next" />
         </ButtonController1>
         </LabelContainer>
 
-        <LabelContainer>
+        <LabelContainer onPress={() => {navigation.navigate('Email');}}>
             <Label>이메일</Label>
             <SubLabelContainer>
                 <SubLabel>wlswhr160@naver.com</SubLabel>
             </SubLabelContainer>
         <ButtonController1>
-            <IconButton6 iconName="next" />
+            <IconButton6 onPress={() => {navigation.navigate('Email');}} iconName="next" />
         </ButtonController1>
         </LabelContainer>
 
-        <LabelContainer>
-            <Label>SNS 연동</Label>
-            <ButtonController2>
-                <IconButton6 iconName="next" />
-            </ButtonController2>
-        </LabelContainer>
-
-        <Label></Label>
 
         <LabelContainer onPress={() => {navigation.navigate('ChangePassword');}}>
             <Label>비밀번호 변경</Label>
