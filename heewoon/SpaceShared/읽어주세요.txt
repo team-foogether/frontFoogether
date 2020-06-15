@@ -1,0 +1,5 @@
+spaceshare = 자체 네비게이션 포함되어있슴 하단바의 네비게이션으로 지정만 해주면 다른 네비게이션 설정 불필요
+└detailpage =  네비게이션 불필요
+└detailsample =테스트용페이지
+└location =지역 받아오는 코드 
+└postpage = 카메라 포함 , 네비게이션 불필요
