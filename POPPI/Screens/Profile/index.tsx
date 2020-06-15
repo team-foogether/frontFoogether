@@ -55,7 +55,7 @@ flex-direction: row;
 margin-top: 30px;
 border: 0.5px;
 border-color: #c4c4c4
-background-color: #fcfcfc;
+background-color: #ffffff;
 padding: 10px;
 `;
 
