@@ -1,16 +1,13 @@
 import React , {useState} from 'react';
+import { StackNavigationProp } from '@react-navigation/stack';
 import Styled from 'styled-components/native';
 import LoginInfo from '~/Screens/QuestionPage/LoginInfo';
 import Input from '~/Components/Input';
+import Button from '~/Components/Button';
 import TextInput from '~/Components/TextInput';
 import { View, Picker, StyleSheet } from "react-native";
 import { ScrollView } from 'react-native';
 
-
-const TabContainer = Styled.View`
-  flex-direction: row;
-  margin-bottom: 16px;
-`;
 
 const Container = Styled.View`
   flex: 1;
@@ -19,29 +16,15 @@ const Container = Styled.View`
   flex-direction: column;
 `;
 
-const LabelTitleController = Styled.View`
-  flex-direction: row;
-  justify-content: center;
-`;
 
-const LabelTouch = Styled.TouchableOpacity`
-`;
-
-const LabelCategory = Styled.Text`
-  flex-direction: row;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px;
-  border-bottom-width: 1px;
-  border-color: #c3c3c3;
-  margin-left: 30px;
-  margin-right: 30px;
-  
-`;
 
 const LabelContainer = Styled.View`
   flex-direction: row;
   margin-top: 5px;
+`;
+
+const ButtonContainer = Styled.View`
+  align-items: center;
 `;
 
 const PickerContainer = Styled.View`
@@ -86,15 +69,6 @@ const LabelContent = Styled.Text`
   margin-bottom: 13px;
 `;
 
-const LabelTouchable = Styled.TouchableOpacity`
-  width: 60%;
-  margin-top: 16px;
-  border: 1px;
-  border-color: #c4c4c4;
-  border-radius: 10px;
-  padding: 10px;
-  background-color: #FEFFFF;
-`;
 
 const LabelEnd = Styled.Text`
   font-size: 25px;
@@ -114,7 +88,13 @@ const styles = StyleSheet.create({
   }
 });
 
-  const QuestionPage = ({nickname}: Props) => {
+type NavigationProp = StackNavigationProp<ProfileTabParamList, 'Profile'>
+
+interface Props {
+  navigation: NavigationProp;
+}
+
+  const QuestionPage = ({nickname, navigation}: Props) => {
     const [selectedValue, setSelectedValue] = useState("java");
 
   return (
@@ -150,10 +130,11 @@ const styles = StyleSheet.create({
           </LabelBox>
             <Input style={{marginBottom: 16, marginTop: 20, width: 380}} placeholder="이메일을 입력해 주세요" />
             <TextInput style={{width: 380, height: 300 }} placeholder="내용을 입력해 주세요"/>
-          <LabelTouchable>
-            <LabelEnd>등록하기</LabelEnd>
-          </LabelTouchable>
-
+        <Button
+          label="등록하기"
+          style={{width: 150, height: 45, marginTop: 30}}
+          onPress={() => {navigation.navigate('Profile');}}
+        />
       </Container>
     </ScrollView>
     
