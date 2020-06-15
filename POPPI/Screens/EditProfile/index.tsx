@@ -53,7 +53,7 @@ interface Props {
   navigation: NavigationProp;
 }
 
-const App = ({navigation}: Props): JSX.Element => {
+const EditProfile = ({navigation}: Props): JSX.Element => {
   const [imageSource, setImageSource] = useState<string|undefined>(undefined);
   const options = {
     title: 'Load Photo',
@@ -132,4 +132,4 @@ const App = ({navigation}: Props): JSX.Element => {
   );
 };
 
-export default App;
+export default EditProfile;
