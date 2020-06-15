@@ -37,7 +37,6 @@ type LoginNaviParamList = {
     Notification: undefined;
     QuestionPage: undefined;
     MyQuestion: undefined;
-    Question: undefined;
     EditProfile: undefined;
     ProfileDetail: undefined;
     ChangePassword: undefined;
