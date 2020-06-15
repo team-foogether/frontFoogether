@@ -5,6 +5,7 @@
       -calendar.png
       -location.png
       -restaurant.png
+      -arrow_icon.png
      
 2. Components
 
