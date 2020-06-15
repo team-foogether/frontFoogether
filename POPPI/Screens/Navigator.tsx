@@ -46,7 +46,6 @@ import PushPage from '~/Screens/PushPage';
 import SettingPage from '~/Screens/SettingPage';
 import Notification from '~/Screens/Notification';
 import QuestionPage from '~/Screens/QuestionPage';
-import Question from '~/Screens/QuestionPage/Question';
 import EditProfile from '~/Screens/EditProfile';
 import ProfileDetail from '~/Screens/SettingPage/ProfileDetail';
 import ChangePassword from '~/Screens/SettingPage/ProfileDetail/ChangePassword';
@@ -240,11 +239,6 @@ const ProfileTab = () => {
         <Stack.Screen
           name="QuestionPage"
           component={QuestionPage}
-          options={{title: '문의하기'}}
-        />
-        <Stack.Screen
-          name="Question"
-          component={Question}
           options={{title: '문의하기'}}
         />
         <Stack.Screen
