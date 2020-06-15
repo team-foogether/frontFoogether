@@ -12,41 +12,41 @@
       -추가된 코드 설명
             interface Props {
               // 이부분 label이 추가되었습니다 
-              label?: string;
-              iconName:
-                | 'camera'
-                | 'live'
-                | 'next'
-                // 'prod', 'meet', 'space' 추가되었습니다.
-                | 'prod'
-                | 'meet'
-                | 'space'
-                | 'send'
-                | 'dotMenu'
-                | 'favorite'
-                | 'comment'
-                | 'bookmark'
-                | 'menu';
-              style?: object;
-              onPress?: () => void;
-            }
-            // label 추가되었습니다.
-            const IconButton2 = ({ iconName, style, label, onPress }: Props) => {
-              const imageSource = {
-                camera: require('~/Assets/Images/ic_camera.png'),
-                live: require('~/Assets/Images/ic_live.png'),
-                next: require('~/Assets/Images/arrow_icon.png'),
-                // prod, meet, space 추가되었습니다.
-                prod: require('~/Assets/Images/restaurant.png'),
-                meet: require('~/Assets/Images/location.png'),
-                space: require('~/Assets/Images/calendar.png'),
-                send: require('~/Assets/Images/ic_send.png'),
-                dotMenu: require('~/Assets/Images/ic_dot_menu.png'),
-                favorite: require('~/Assets/Images/Tabs/ic_favorite_outline.png'),
-                comment: require('~/Assets/Images/ic_comment.png'),
-                bookmark: require('~/Assets/Images/ic_bookmark.png'),
-                menu: require('~/Assets/Images/ic_menu.png'),
-              };
+      label?: string;
+      iconName:
+        | 'camera'
+        | 'live'
+        | 'next'
+        // 'prod', 'meet', 'space' 추가되었습니다.
+        | 'prod'
+        | 'meet'
+        | 'space'
+        | 'send'
+        | 'dotMenu'
+        | 'favorite'
+        | 'comment'
+        | 'bookmark'
+        | 'menu';
+      style?: object;
+      onPress?: () => void;
+    }
+    // label 추가되었습니다.
+    const IconButton2 = ({ iconName, style, label, onPress }: Props) => {
+      const imageSource = {
+        camera: require('~/Assets/Images/ic_camera.png'),
+        live: require('~/Assets/Images/ic_live.png'),
+        next: require('~/Assets/Images/arrow_icon.png'),
+        // prod, meet, space 추가되었습니다.
+        prod: require('~/Assets/Images/restaurant.png'),
+        meet: require('~/Assets/Images/location.png'),
+        space: require('~/Assets/Images/calendar.png'),
+        send: require('~/Assets/Images/ic_send.png'),
+        dotMenu: require('~/Assets/Images/ic_dot_menu.png'),
+        favorite: require('~/Assets/Images/Tabs/ic_favorite_outline.png'),
+        comment: require('~/Assets/Images/ic_comment.png'),
+        bookmark: require('~/Assets/Images/ic_bookmark.png'),
+        menu: require('~/Assets/Images/ic_menu.png'),
+      };
           // IconButton2 ~ 6 까지 똑같습니다.
           // 주의사항! IconButton2~6 까지 Icon의 size가 다릅니다. 각 화면에 쓰이기 위해 사이즈 조정을 하였습니다. 참고 부탁드릴게요 :)
                       Container 를 이용하면 됐을 것을,,, 이를 몰랐던 과거의 나는 웁니다,,,
